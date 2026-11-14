@@ -38,6 +38,7 @@ jobs:
         working-directory: source/nivest-app
         run: |
           npm install
+          printf '%s\n' '/// <reference types="vite/client" />' > src/vite-env.d.ts
           npm run build
 
       - name: Configurar Pages
